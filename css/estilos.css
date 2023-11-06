@@ -1,0 +1,548 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body {
+    padding: 1px;
+}
+/* propiedades estandar de colores en textos o cuerpo */
+.colorBlanco{
+    color: #ffffff !important;
+}
+
+.colorGris{
+    color: #999DA0 !important;
+}
+
+.colorVerde{
+    color: #29A545 !important;
+}
+
+/* Variables de Colores BS tomado de la pagina de boo*/
+:root,
+[data-bs-theme=light] {
+    --bs-blue: #0d6efd;
+    --bs-indigo: #6610f2;
+    --bs-purple: #6f42c1;
+    --bs-pink: #d63384;
+    --bs-red: #dc3545;
+    --bs-orange: #fd7e14;
+    --bs-yellow: #ffc107;
+    --bs-green: #198754;
+    --bs-teal: #20c997;
+    --bs-cyan: #0dcaf0;
+    --bs-black: #000;
+    --bs-white: #fff;
+    --bs-gray: #6c757d;
+    --bs-gray-dark: #343a40;
+    --bs-gray-100: #f8f9fa;
+    --bs-gray-200: #e9ecef;
+    --bs-gray-300: #dee2e6;
+    --bs-gray-400: #ced4da;
+    --bs-gray-500: #adb5bd;
+    --bs-gray-600: #6c757d;
+    --bs-gray-700: #495057;
+    --bs-gray-800: #343a40;
+    --bs-gray-900: #212529;
+    --bs-primary: #0d6efd;
+    --bs-secondary: #6c757d;
+    --bs-success: #198754;
+    --bs-info: #0dcaf0;
+    --bs-warning: #ffc107;
+    --bs-danger: #dc3545;
+    --bs-light: #f8f9fa;
+    --bs-dark: #212529;
+    --bs-primary-rgb: 13, 110, 253;
+    --bs-secondary-rgb: 108, 117, 125;
+    --bs-success-rgb: 25, 135, 84;
+    --bs-info-rgb: 13, 202, 240;
+    --bs-warning-rgb: 255, 193, 7;
+    --bs-danger-rgb: 220, 53, 69;
+    --bs-light-rgb: 248, 249, 250;
+    --bs-dark-rgb: 33, 37, 41;
+    --bs-primary-text-emphasis: #052c65;
+    --bs-secondary-text-emphasis: #2b2f32;
+    --bs-success-text-emphasis: #0a3622;
+    --bs-info-text-emphasis: #055160;
+    --bs-warning-text-emphasis: #664d03;
+    --bs-danger-text-emphasis: #58151c;
+    --bs-light-text-emphasis: #495057;
+    --bs-dark-text-emphasis: #495057;
+    --bs-primary-bg-subtle: #cfe2ff;
+    --bs-secondary-bg-subtle: #e2e3e5;
+    --bs-success-bg-subtle: #d1e7dd;
+    --bs-info-bg-subtle: #cff4fc;
+    --bs-warning-bg-subtle: #fff3cd;
+    --bs-danger-bg-subtle: #f8d7da;
+    --bs-light-bg-subtle: #fcfcfd;
+    --bs-dark-bg-subtle: #ced4da;
+    --bs-primary-border-subtle: #9ec5fe;
+    --bs-secondary-border-subtle: #c4c8cb;
+    --bs-success-border-subtle: #a3cfbb;
+    --bs-info-border-subtle: #9eeaf9;
+    --bs-warning-border-subtle: #ffe69c;
+    --bs-danger-border-subtle: #f1aeb5;
+    --bs-light-border-subtle: #e9ecef;
+    --bs-dark-border-subtle: #adb5bd;
+    --bs-white-rgb: 255, 255, 255;
+    --bs-black-rgb: 0, 0, 0;
+    --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+    --bs-body-font-family: var(--bs-font-sans-serif);
+    --bs-body-font-size: 1rem;
+    --bs-body-font-weight: 400;
+    --bs-body-line-height: 1.5;
+    --bs-body-color: #212529;
+    --bs-body-color-rgb: 33, 37, 41;
+    --bs-body-bg: #fff;
+    --bs-body-bg-rgb: 255, 255, 255;
+    --bs-emphasis-color: #000;
+    --bs-emphasis-color-rgb: 0, 0, 0;
+    --bs-secondary-color: rgba(33, 37, 41, 0.75);
+    --bs-secondary-color-rgb: 33, 37, 41;
+    --bs-secondary-bg: #e9ecef;
+    --bs-secondary-bg-rgb: 233, 236, 239;
+    --bs-tertiary-color: rgba(33, 37, 41, 0.5);
+    --bs-tertiary-color-rgb: 33, 37, 41;
+    --bs-tertiary-bg: #f8f9fa;
+    --bs-tertiary-bg-rgb: 248, 249, 250;
+    --bs-heading-color: inherit;
+    --bs-link-color: #0d6efd;
+    --bs-link-color-rgb: 13, 110, 253;
+    --bs-link-decoration: underline;
+    --bs-link-hover-color: #0a58ca;
+    --bs-link-hover-color-rgb: 10, 88, 202;
+    --bs-code-color: #d63384;
+    --bs-highlight-color: #212529;
+    --bs-highlight-bg: #fff3cd;
+    --bs-border-width: 1px;
+    --bs-border-style: solid;
+    --bs-border-color: #dee2e6;
+    --bs-border-color-translucent: rgba(0, 0, 0, 0.175);
+    --bs-border-radius: 0.375rem;
+    --bs-border-radius-sm: 0.25rem;
+    --bs-border-radius-lg: 0.5rem;
+    --bs-border-radius-xl: 1rem;
+    --bs-border-radius-xxl: 2rem;
+    --bs-border-radius-2xl: var(--bs-border-radius-xxl);
+    --bs-border-radius-pill: 50rem;
+    --bs-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    --bs-box-shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    --bs-box-shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+    --bs-box-shadow-inset: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+    --bs-focus-ring-width: 0.25rem;
+    --bs-focus-ring-opacity: 0.25;
+    --bs-focus-ring-color: rgba(13, 110, 253, 0.25);
+    --bs-form-valid-color: #198754;
+    --bs-form-valid-border-color: #198754;
+    --bs-form-invalid-color: #dc3545;
+    --bs-form-invalid-border-color: #dc3545;
+}
+/* Barra de navegacion estilos */
+
+.navbar-expand-lg.bg-body-tertiary {
+    /* --bs-bg-opacity: 1; */
+    background-color: #353A40 !important;
+    padding: 0 50px 50px;
+}
+.logoHeader{
+    display: flex;
+    width: 95px;
+    height: 50px;
+}
+.linksHeader{
+    display: flex;
+    justify-content: flex-end;
+    margin-top:auto; 
+    margin-bottom: auto;
+}
+
+/* header imagen museo del agua */
+
+.header{
+    background-image: linear-gradient(to right, #000000ce, #00000093, #0000005e, #ffffff3a), url("../assets/img/ba1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.header .headerFlex{
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.headerTexto{
+    width: 35%;
+    font-weight: 500;
+    font-size: medium;
+    color: #ffffff;
+    text-align: right;
+    margin-bottom: 20vh;
+    position: absolute;
+    z-index: 1;
+}
+
+.header .headerFlex .headerTexto p{
+    padding-left: 110vh;
+}
+.botonesHeader{
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.botonBlanco{
+    text-decoration: none;
+    color: #ffffff;
+    border: 1px solid #ecebe9ed;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.botonVerde{
+    text-decoration: none;
+    background-color: #29A744;
+    color: #ffffff;
+    margin-left: 10px;
+    border: 1px solid #ecebe9ed;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.botonBlanco:hover{
+    background-color: #29A744;
+}
+
+.botonVerde:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+@media (max-width:992px){
+
+    .botonesHeader {
+        display: flex;
+        flex-flow: row wrap;
+        margin: 5px 0;
+        font-size: smaller;
+    }
+}
+
+/* Tarjeta de Oradores */
+
+.conoce {
+    text-align: center;
+    font-size: medium;
+    margin: 1rem;
+}
+
+.orador {
+    font-weight: 50;
+    font-size: small;
+    margin-bottom: 10px;
+}
+
+.mediaTarjetas {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+}
+
+.tarjetas {
+    border: 1px solid #DFDFDF;
+    border-radius: 5px;
+    width: 30%;
+    display: inline-block;
+    margin-top: 10px;
+    margin-right: 40px;
+    margin-bottom: 20px;
+    text-align: left;
+    height: 80%;
+}
+
+.tarjetas img {
+    width: 100%;
+    height: 60%;
+    border-radius: 5px 5px 0px 0px;
+    object-fit: fill;
+}
+
+.cuerpoTarjeta {
+    margin: 10px;
+}
+
+.cuerpoTarjeta h4 {
+    display: inline-block;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+.textCard{
+    display: block;
+}
+.tituloLenguaje {
+    margin-bottom: 10px;
+}
+
+.colorAmarillo {
+    background-color: #FEC106;
+    color: #000000;
+    padding: 5px;
+}
+
+.colorCeleste {
+    background-color: #17A2B7;
+    color: #ffffff;
+    padding: 5px;
+}
+
+.colorGray {
+    background-color: #6C757E;
+    color: #ffffff;
+    padding: 5px;
+}
+
+.colorRed {
+    background-color: #DD3647;
+    color: #ffffff;
+    padding: 5px;
+}
+
+.tituloNombre {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+@media (max-width:768px){
+    .mediaTarjetas {
+        display: flex;
+        flex-flow: row wrap;
+    }
+    .textCard {
+        display: flex;
+        justify-content:center;
+        flex-wrap: nowrap;
+    }
+
+}
+
+/* diseño del lugar y fecha */
+
+
+.ubicacion{
+    display: flex;
+    padding-top: 2px;
+    border-top: 2px solid #000;
+}
+
+.ubicacion img{
+    width: 50%;
+    margin: 0;
+}
+
+.ubicacion .ubicacionText{
+    width: 50%;
+    background-color: #333A40;
+    font-size: large;
+    font-weight: 200;
+    color: #FFF;
+    padding: 20px;
+    margin-left: 1px; 
+    padding: 30px 30px;
+} 
+
+.botonConoce{
+    text-decoration: none;
+    padding: 10px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.botonConoce:hover{
+    background-color: #fff;
+    color: #000;
+    font-size: larger;
+}
+
+/* diseño del formulario */
+.form .tituloForm{
+    text-align: center;
+    font-size: medium;
+}
+
+.form .subtituloForm {
+    margin-top: 20px;
+    font-size: small;
+    font-weight: 100;
+}
+
+.form .textForm p span{
+    text-decoration: underline dotted #000;
+}
+
+.form .conteForm{
+    width: 40%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}   
+
+.form .conteForm .nombreApellido{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.form .conteForm .inputName{
+    width: 48%;
+    padding: 10px 10px;
+    border-radius: 5px;
+    border: 2px solid #CFD4DA;
+}
+
+.form .conteForm .inputText{
+    width: 100%;
+    padding: 10px 10px;
+    border-radius: 5px;
+    border: 1px solid #CFD4DA;
+}
+
+.form .conteForm .botonSend{
+    width: 100%;
+    padding: 10px 10px;
+    border-radius: 5px;
+    background-color: #96C93E;
+    color: #fff;
+    border: 1px solid #96C93E;
+    margin-top: 10px;
+}
+
+/* Diseño Footer */
+
+.footer {
+    background-image: linear-gradient(to right, #1d3744, #1d3c4c, #1d4154, #1c465c, #1c4b65);
+    margin-top: 10px;
+    text-align: center;
+}
+
+footer ul li {
+    list-style: none;
+    display: inline-block;
+    height: auto;   
+    width: 90px;
+    margin: 40px;
+    text-align: center;
+    justify-content: center;
+}
+
+.lnkFooter {
+    text-decoration: none;
+    text-align: center;
+}
+
+/* ********************************************************ESTILOS PARA LA COMPRA DE TICKETS*********************************************************************** */
+
+
+/* estilos para la seccion de comprar tickets */
+
+.tarjetas_conferencia{
+    height:25%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin-right: 27%;
+    margin-left: 27%;
+    border-radius: 5px; 
+}
+.card-header-estudiante{
+    background-color: #007BFF !important;
+}
+
+.card-header-trainee{
+    background-color: #17A2B8 !important;
+}
+
+.card-header-junior{
+    background-color: #FFC107 !important;
+}
+
+.tarjetas_conferencia .card{
+    box-shadow: none;
+    border-radius: 0;
+}
+
+
+.list-group, .list-group-flush, .list-group-item, .card-footer{
+    border: none !important;
+    background-color: #FFF !important;
+}
+.list-group-item:last-child{
+    font-weight: bolder(--bs-body-color);
+}
+/* estilos del titulo central para la compra de los tickets */
+.titulo_tickets{
+    margin-top: 10px;
+    height: 10%;
+    text-align: center;
+}
+
+/*  ESTILOS PARA EL FORMULARIO DE COMPRA DE TICKETS*/
+
+
+.formularioTickets{
+    height: 35%;
+    margin-right: 27%;
+    margin-left: 27%;
+}
+
+.correo{
+    margin-top: 20px;
+}
+.cantidad-categoria{
+    display: flex;
+    justify-content: space-between;
+}
+
+.totales{
+    margin-top: 20px;
+}
+
+.totales .numeroTotal{
+    background-color: #CCE5FF !important;
+}
+
+
+/* botones del formulario*/
+
+
+.botonTickets{
+    
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    margin-bottom: 150px;
+}
+
+.botones{
+    background-color: #97C93E;
+    color: #FFF;
+    border-color: #97C93E;
+    border-radius: 5px;
+    margin-left: 0px;
+    width: 49%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
